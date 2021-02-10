@@ -1,10 +1,13 @@
 import Head from 'next/head'
-import { Button } from 'antd'
-
-export default function Home() {
+import { Affix, Layout } from 'antd'
+import Header from './Header'
+import { useState } from 'react'
+const { Footer, Sider, Content } = Layout
+const MyLayout = props => {
+    const [top, setTop] = useState(0);
   return (
     <>
-     <Head>
+      <Head>
         <title>Barber</title>
         <link
           rel='stylesheet'
@@ -17,11 +20,17 @@ export default function Home() {
           href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap'
           rel='stylesheet'
         />
-        
       </Head>
-      <Button type='primary' block>
-        Primary
-      </Button>
+      <Layout>
+        <Affix offsetTop={top}>
+          <Header />
+        </Affix>
+
+        <Content>Content</Content>
+        <Footer>Footer</Footer>
+      </Layout>
     </>
   )
 }
+
+export default MyLayout

@@ -1,0 +1,69 @@
+.top-bar {
+  position: relative;
+  height: 60px;
+  background: #1d2434;
+  &-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 60px;
+    padding: 0 10px;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    &:last-child {
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    h2 {
+      color: #eeeeee;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+    p {
+      color: #eeeeee;
+      font-size: 12px;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+
+  .social {
+    display: flex;
+    height: 60px;
+    font-size: 0;
+    justify-content: flex-end;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 100%;
+      font-size: 22px;
+      color: #ffffff;
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+      &:first-child {
+        border-left: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      &:hover {
+        color: #d5b981;
+        background: #ffffff;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    padding: 0 60px;
+  }
+}
